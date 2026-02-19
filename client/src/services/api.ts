@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = '/api';
 
 export const fetchAlerts = async (lat: number, lng: number) => {
     const res = await fetch(`${API_URL}/alerts?lat=${lat}&lng=${lng}`);
