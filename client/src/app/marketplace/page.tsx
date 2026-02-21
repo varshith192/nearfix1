@@ -37,7 +37,7 @@ export default function Marketplace() {
             ) : items.length === 0 ? (
                 <div className="text-center text-gray-500 mt-10">No items found nearby. Be the first to sell!</div>
             ) : (
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {items.map(item => <ItemCard key={item._id} item={item} />)}
                 </div>
             )}

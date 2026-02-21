@@ -39,7 +39,9 @@ export default function Home() {
       ) : alerts.length === 0 ? (
         <div className="text-center text-gray-500 mt-10">No alerts found nearby.</div>
       ) : (
-        alerts.map(alert => <AlertCard key={alert._id} alert={alert} />)
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {alerts.map(alert => <AlertCard key={alert._id} alert={alert} />)}
+        </div>
       )}
     </div>
   );
